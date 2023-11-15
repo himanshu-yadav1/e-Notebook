@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import './Signup.css'
 
 const Signup = (props) => {
     const [credentials, setCredentials] = useState({name: "", email: "", password: "", cpassword: ""})
@@ -39,9 +40,9 @@ const Signup = (props) => {
     }
 
     return (
-        <div>
-            <h2>Create account to use NoteBook</h2>
-            <form onSubmit={handleSubmit} className='my-3'>
+        <div id='container'>
+            <h2 id='heading'>Create account to use NoteBook</h2>
+            <form onSubmit={handleSubmit} className='my-3 inner-container'>
                 <div className="mb-2">
                     <label htmlFor="name" className="form-label">Name</label>
                     <input type="text" className="form-control" id="name" name='name' aria-describedby="emailHelp" onChange={onChange}/>
