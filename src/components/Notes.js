@@ -3,6 +3,7 @@ import noteContext from '../context/notes/noteContext';
 import Noteitem from './Noteitem';
 import AddNote from './AddNote';
 import { useNavigate } from 'react-router-dom'
+import './Notes.css'
 
 const Notes = (props) => {
     const context = useContext(noteContext);
@@ -56,15 +57,15 @@ const Notes = (props) => {
                         <div className="modal-body">
                             <form className="my-3">
                                 <div className="mb-3">
-                                    <label htmlFor="title" className="form-label">Title</label>
+                                    <label htmlFor="title" className="form-label ctrl">Title</label>
                                     <input type="text" className="form-control" id="etitle" name='etitle' value={note.etitle} onChange={onChange} minLength={5} required/>
                                 </div>
                                 <div className="mb-3">
-                                    <label htmlFor="description" className="form-label">Description</label>
+                                    <label htmlFor="description" className="form-label ctrl">Description</label>
                                     <input type="text" className="form-control" id="edescription" name='edescription' value={note.edescription} onChange={onChange} minLength={5} required/>
                                 </div>
                                 <div className="mb-3">
-                                    <label htmlFor="tag" className="form-label">Tag</label>
+                                    <label htmlFor="tag" className="form-label ctrl">Tag</label>
                                     <input type="text" className="form-control" id="etag" name='etag' value={note.etag} onChange={onChange} />
                                 </div>
                             </form>
@@ -77,7 +78,7 @@ const Notes = (props) => {
                 </div>
             </div>
             <div className="row my-3">
-                <h2>Your Notes</h2>
+                <h2>Your Notes ...</h2>
                 <div className="container mx-2">
                     {notes.length === 0 && "No Notes to Display"}
                 </div>
